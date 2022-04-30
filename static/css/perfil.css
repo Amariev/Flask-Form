@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.perfil {
+  width: 460px;
+  height: auto;
+  margin: 80 px auto;
+  border-radius: 10px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-color: #fbfbfb;
+}
+
+h1 {
+  font-size: 39px;
+  text-align: center;
+  color: #ab4493;
+}
+
+.info {
+  text-align: center;
+  padding-bottom: 5px;
+}
+.text_info {
+  color: #6e6d6e;
+}
+
