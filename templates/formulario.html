@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block estilos %}
+<link rel="stylesheet" href='{{ url_for("static", filename="/css/form.css") }}'>
+{% endblock %}
+
+{% block content %}
+  <div class="contact_form">
+    <div class="formulario">
+      <h1>Formulario</h1>
+      <form action="{{ url_for('perfil') }}" method="POST">
+          <p>
+            <label for="nombre">Nombre
+                <span class ="obligatorio">*</span>
+            </label>
+            <input type="text" name="nombre" required="obligatorio"
+            placeholder="Ingrese su nombre" maxlength="20">
+          </p>
+
+          <p>
+            <label for="apellido">Apellido
+                <span class ="obligatorio">*</span>
+            </label>
+            <input type="text" name="apellido" required="obligatorio"
+            placeholder="Ingrese su nombre" maxlength="20">
+          </p>
+
+          <p>
+            <label for="username">Username
+                <span class ="obligatorio">*</span>
+            </label>
+            <input type="text" name="username" required="obligatorio"
+            placeholder="Ingrese su nombre" maxlength="10">
+          </p>
+
+          <p>
+            <label for ="birthday" class ="birthday">Fecha de nacimiento
+              <span class="obligatorio">*</span>
+            </label>
+            <input type="date" class="input_birthday" name="birthday" required="obligatorio">
+          </p>
+
+          <p>
+            <label for ="email" class ="email"> Email
+              <span class="obligatorio">*</span>
+            </label>
+            <input type="email" name="email" required="obligatorio" placeholder="Escribe tu Email">
+          </p>
+
+          <p>
+            <label for="telefono" class="colocar_telefono">Teléfono
+            </label>
+            <input type="tel" name="telefono" placeholder="Escribe tu teléfono">
+          </p>
+
+          <p>
+            <label for="biografia" class="colocar_biografia">Biografia
+            </label>
+            <input type="text" name="biografia" placeholder="Escribe un asunto">
+          </p>
+
+          <button type="submit" value="Enviar">
+          <p>Enviar</p></button>
+
+        </form>
+
+    </div>
+  </div>
+{% endblock %}

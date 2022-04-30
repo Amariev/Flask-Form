@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+{% block estilos %}
+<link rel="stylesheet" href='{{ url_for("static", filename="/css/perfil.css") }}'>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <section class="perfil">
+    <h1>Perfil</h1>
+      <div class="info">
+        <p class="text_info">Nombre de Usuario:</p>
+        <p class="input_info">{{ username }}</p>
+      </div>
+      <div class="info">
+        <p class="text_info">Nombre:</p>
+        <p class="input_info">{{ name }}</p>
+      </div>
+      <div class="info">
+        <p class="text_info">Apellido:</p>
+        <p class="input_info">{{ surename }}</p>
+      </div>
+      <div class="info">
+        <p class="text_info">Cumpleaños: </p>
+        <p class="input_info">{{ birthday }}</p>
+      </div>
+      <div class="info">
+        <p class="text_info">Email: </p>
+        <p class="input_info">{{ email }}</p>
+      </div>
+      <div class="info">
+        <p class="text_info">Teléfono:</p>
+        <p class="input_info">{{ cellphone }}</p>
+      </div>
+      <div class="info">
+        <p class="text_info">Biografía:</p>
+        <p class="input_info">{{ bibliography }}</p>
+      </div>
+    </section>
+  </div>
+{% endblock %}
